@@ -33,7 +33,6 @@ with st.sidebar:
     st.divider()
     st.info("Dies ist ein KI-Pilotprojekt. Ich ersetze keine professionelle Therapie oder Rechtsberatung.")
     st.write("---")
-    st.write("**Impressum:** [Dein Name/Organisation], [Deine Adresse]")
 
 # --- 3. KI-LOGIK ---
 # API Key sicher eingeben (lokal oder in Streamlit Secrets)
