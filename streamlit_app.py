@@ -37,12 +37,12 @@ with st.sidebar:
 
 # --- 3. KI-LOGIK ---
 # API Key sicher eingeben (lokal oder in Streamlit Secrets)
-api_key = st.secrets.get("GOOGLE_API_KEY") or st.sidebar.text_input("Gemini API Key eingeben:", type="password")
+api_key = st.secrets.get("GOOGLE_API_KEY")
 
 if api_key:
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel(
-    model_name="models/gemini-1.5-flash",  # Das "models/" davor ist wichtig!
+    model_name="gemini-1.5-flash",  # Das "models/" davor ist wichtig!
     system_instruction=SYSTEM_INSTRUCTION
 )
 
