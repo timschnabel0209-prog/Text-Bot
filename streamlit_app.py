@@ -42,9 +42,9 @@ api_key = st.secrets.get("GOOGLE_API_KEY") or st.sidebar.text_input("Gemini API 
 if api_key:
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel(
-        model_name="gemini-1.5-flash",
-        system_instruction=SYSTEM_INSTRUCTION
-    )
+    model_name="models/gemini-1.5-flash",  # Das "models/" davor ist wichtig!
+    system_instruction=SYSTEM_INSTRUCTION
+)
 
     # Chat-Verlauf speichern
     if "messages" not in st.session_state:
