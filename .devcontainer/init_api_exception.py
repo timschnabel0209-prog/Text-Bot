@@ -1,6 +1,6 @@
 import json
 import huggingface
 
-api_string = "api_key_from_gpt"
+api_string = "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"
 
 json api_load = {
